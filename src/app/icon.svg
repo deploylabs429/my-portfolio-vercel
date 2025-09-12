@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" ry="128" fill="#0b1020"/>
+  <!-- Code glyph: < / > -->
+  <g fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+    <!-- < -->
+    <polyline points="210,160 120,256 210,352"/>
+    <!-- / -->
+    <line x1="250" y1="140" x2="330" y2="372"/>
+    <!-- > -->
+    <polyline points="302,160 392,256 302,352"/>
+  </g>
+</svg>
