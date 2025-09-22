@@ -42,7 +42,23 @@ const ProficiencyGrid = ({ levels }: ProficiencyGridProps) => {
                 ></div>
               </div>
 
-              <div className="text-2xl font-bold gradient-text">{skill.level}%</div>
+              {(() => {
+                const lvl = skill.level;
+                let label = 'Good';
+                if (lvl >= 90) label = 'Excellent';
+                else if (lvl >= 80) label = 'Advanced';
+                else if (lvl >= 70) label = 'Good';
+                else if (lvl >= 60) label = 'Intermediate';
+                else label = 'Foundational';
+                return (
+                  <div
+                    className="text-2xl font-bold gradient-text"
+                    aria-label={`${skill.name} proficiency: ${label}`}
+                  >
+                    {label}
+                  </div>
+                );
+              })()}
             </div>
           ))}
         </div>
@@ -50,5 +66,4 @@ const ProficiencyGrid = ({ levels }: ProficiencyGridProps) => {
     </section>
   );
 };
-
 export default ProficiencyGrid;

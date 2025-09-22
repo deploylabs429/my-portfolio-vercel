@@ -21,7 +21,9 @@ const CoffeeCTA = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="mailto:christophertanaka42@gmail.com"
+              href="https://calendly.com/christophertanaka42/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-2xl on-gradient font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus-ring gradient-bg"
             >
               Schedule a Chat

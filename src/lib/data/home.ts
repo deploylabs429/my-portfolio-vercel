@@ -1,20 +1,22 @@
 export const homeHighlights = [
   {
     iconName: 'code',
-    title: 'Full-Stack Expertise',
-    description: 'React, TypeScript, Node.js, Python. From UX to scalable backends.',
+    title: 'Frontend Performance',
+    description:
+      'React/Next.js + TypeScript. Rendering optimization, reconciler-savvy UI, and smooth interactions.',
     gradient: 'from-indigo-500 to-purple-600',
   },
   {
     iconName: 'flash',
-    title: 'Performance Focus',
-    description: 'Real-time systems, WebGL, and low-latency architectures that scale.',
+    title: 'AI/LLM Integration',
+    description:
+      'RAG, multimodal image+text search, and inference pipelines from prototype to production.',
     gradient: 'from-purple-500 to-pink-600',
   },
   {
     iconName: 'rocket',
-    title: 'AI Integration',
-    description: 'GPT UX, CV, and ML pipelines—from prototyping to production.',
+    title: 'Real-Time at Scale',
+    description: 'LiveGraph-style subscriptions, low-latency updates, and shard-aware backends.',
     gradient: 'from-blue-500 to-cyan-600',
   },
 ] as const;

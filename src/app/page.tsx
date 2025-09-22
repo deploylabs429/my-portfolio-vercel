@@ -58,7 +58,7 @@ const Home = () => {
           url: baseUrl,
           jobTitle: 'Senior Software Engineer',
           sameAs: [
-            // Add your profiles if available
+            'https://www.christtanaka.life/',
             // 'https://www.linkedin.com/in/USERNAME',
             // 'https://github.com/USERNAME',
           ],
