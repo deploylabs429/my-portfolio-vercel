@@ -10,7 +10,7 @@ const ProfileAvatar = () => {
         <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1 animate-fade-in-scale shadow-2xl">
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
-              src="/photo.png"
+              src="/photo2.png"
               alt="Christopher Tanaka"
               width={160}
               height={160}
