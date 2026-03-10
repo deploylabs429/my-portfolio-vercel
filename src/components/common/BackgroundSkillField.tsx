@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useSyncExternalStore } from 'react';
 
 import { createPortal } from 'react-dom';
 
@@ -8,6 +8,12 @@ import SkillSwarm from '@/components/common/SkillSwarm';
 import type { SkillKey } from '@/components/common/TechnologyLogos';
 
 const BackgroundSkillField = () => {
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+
   const allSkills: SkillKey[] = useMemo(
     () => [
       'react',
@@ -61,7 +67,8 @@ const BackgroundSkillField = () => {
     [],
   );
 
-  if (typeof document === 'undefined') return null;
+  // Keep SSR and first client render identical to avoid hydration mismatch.
+  if (!isMounted) return null;
 
   return createPortal(
     <div
