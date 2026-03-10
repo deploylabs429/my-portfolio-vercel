@@ -24,6 +24,6 @@ export const homeHighlights = [
 export const homeStats = [
   { value: '12+', label: 'Years Experience' },
   { value: '50+', label: 'Projects Delivered' },
-  { value: '4', label: 'Major Companies' },
+  { value: '5', label: 'Major Companies' },
   { value: '100%', label: 'Client Satisfaction' },
 ] as const;

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { MdAutoAwesome, MdClose, MdMenu } from 'react-icons/md';
+import { MdAutoAwesome, MdCalendarToday, MdClose, MdMenu } from 'react-icons/md';
 
 import DarkModeToggle from '@/components/layout/DarkModeToggle';
 
@@ -85,6 +85,17 @@ const Navbar = () => {
 
               {/* Right side */}
               <div className="flex items-center space-x-3">
+                <a
+                  href="https://calendly.com/christophertanaka42/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl gradient-bg on-gradient font-medium text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 focus-ring whitespace-nowrap"
+                  aria-label="Schedule a chat"
+                >
+                  <MdCalendarToday className="w-4 h-4 flex-shrink-0" />
+                  <span>Schedule a Chat</span>
+                </a>
+
                 <DarkModeToggle />
 
                 {/* Mobile menu button */}
@@ -121,6 +132,19 @@ const Navbar = () => {
                       <span className="font-medium">{link.label}</span>
                     </Link>
                   ))}
+
+                  <div className="pt-2 border-t border-[var(--glass-border)]">
+                    <a
+                      href="https://calendly.com/christophertanaka42/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl gradient-bg on-gradient font-semibold transition-all duration-300 focus-ring"
+                    >
+                      <MdCalendarToday className="w-5 h-5" />
+                      <span>Schedule a Chat</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             )}

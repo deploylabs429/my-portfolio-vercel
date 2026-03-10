@@ -33,10 +33,28 @@ type SkillCategory = {
 
 export const experienceData: readonly ExperienceItem[] = [
   {
+    company: 'ProductNow',
+    title: 'Senior Software Engineer',
+    period: 'Oct 2025 - Present',
+    location: 'Miami, FL (Remote)',
+    description:
+      'Building an AI-native operating system for product & engineering teams, connecting plans, requirements, and execution into a shared intelligence layer.',
+    logoName: 'productnow',
+    bullets: [
+      'Built an AI-native operating system for product & engineering teams, connecting plans, requirements, and execution into a shared intelligence layer that stays current in real time.',
+      'Developed agentic "AI teammates" that plug into existing workflows to reduce coordination overhead (alignment, planning, handoffs, status updates).',
+      'Shipped end-to-end features in a TypeScript monorepo stack (Next.js/NestJS), with a strong focus on UX clarity, performance, and reliability.',
+      'Contributed to enterprise readiness: identity/SSO via Auth0, continuous security posture monitoring via Vanta, and auditability/access controls supporting SOC 2 Type II readiness.',
+      'Partnered closely with product and design to translate messy strategy into crisp workflow primitives (strategy → roadmap → sprint planning → delivery).',
+    ],
+    gradient: 'from-emerald-500 to-teal-600',
+    iconName: 'flash',
+  },
+  {
     company: 'FoxyAI',
     title: 'Senior Software Engineer',
     period: 'Dec 2023 - Sep 2025',
-    location: 'Miami, FL (Remote)',
+    location: 'Salem, UT (Remote)',
     description:
       'Built and scaled AI-powered property intelligence dashboards and full-stack data flows, with multimodal search and subscription/billing.',
     logoName: 'foxyai',
@@ -46,7 +64,6 @@ export const experienceData: readonly ExperienceItem[] = [
       'Integrated a multimodal, LLM-powered advanced search using RAG, enabling intuitive image-and-text queries across large-scale property datasets with more accurate, context-aware results.',
       'Developed full-stack data flows from image ingestion through AI inference to visual output, ensuring speed, reliability, and product alignment.',
       'Implemented a subscription and billing system using Stripe Checkout and a customer portal for plan management, invoices, and payments.',
-      'Partnered with product, engineering, and domain experts to deliver a Quality Control module, reducing manual review time by ~50% in inspection and lending workflows.',
     ],
     gradient: 'from-indigo-500 to-purple-600',
     iconName: 'work',
@@ -89,7 +106,7 @@ export const experienceData: readonly ExperienceItem[] = [
   {
     company: 'Google',
     title: 'Software Engineer',
-    period: 'May 2013 - Nov 2016',
+    period: 'Dec 2013 - Nov 2016',
     location: 'Mountain View, CA',
     description:
       'Built internal web tools and experimentation systems used by advertiser platforms.',
@@ -148,8 +165,11 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
     gradient: 'from-blue-500 to-cyan-500',
     skills: [
       'JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS',
-      'React, Next.js, Redux, Context API, Zustand, Storybook, Material UI, TailwindCSS',
-      'Canvas API, WebGL, SVG, WebAssembly, WebSockets, WebRTC',
+      'React.js, Next.js (Page & App Router), Vue.js, Angular.js',
+      'Redux, React Query, Zustand, TailwindCSS, Styled Components, Material UI, Bootstrap',
+      'Figma Dev Mode, Code Connect, Simple Design System',
+      'Accessibility (WCAG), Responsive Development, Cross-Browser Development',
+      'Canvas API, WebGL, SVG, WebAssembly',
     ],
   },
   {
@@ -157,28 +177,34 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
     title: 'Backend & APIs',
     gradient: 'from-purple-500 to-pink-500',
     skills: [
-      'Node.js, Express.js, Python, C#, Ruby on Rails',
-      'REST, GraphQL, AI/ML/CV model endpoints, real-time services (WebSockets)',
+      'Node.js, Express.js, NestJS, Python, Java, PHP, SQL',
+      'REST APIs, GraphQL, WebSocket APIs, GraphQL Subscriptions, LiveGraph-like systems',
+      'Data Pipelines, Event-Driven Architecture, RabbitMQ, Kafka',
+      'OAuth2, JWT, SSO',
+      'PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Redis',
     ],
   },
   {
     iconName: 'psychology',
-    title: 'AI/ML & Data Visualization',
+    title: 'AI/LLM & Advanced Systems',
     gradient: 'from-green-500 to-emerald-500',
     skills: [
-      'TensorFlow integration, NLP/CV model pipelines',
-      'D3.js, financial time-series analysis, interactive dashboards',
-      'GPT-powered multimodal search, Visual Property Intelligence UIs',
+      'RAG, Multimodal systems, AI Inference Pipelines',
+      'OpenAI Integration, LangChain, LangGraph, Pinecone, FAISS',
+      'Cursor, AI-assisted development workflows',
+      'D3.js, interactive dashboards, time-series analysis',
     ],
   },
   {
     iconName: 'cloud',
-    title: 'DevOps & Infrastructure',
+    title: 'Cloud, DevOps & Infrastructure',
     gradient: 'from-orange-500 to-red-500',
     skills: [
-      'Docker, Kubernetes, AWS (EC2, ELB, Redis), serverless',
-      'CI/CD pipelines (Jenkins, GitHub Actions), Storybook snapshot testing',
-      'Build tools: Webpack, Babel, npm/Yarn, Vite',
+      'AWS, GCP, Azure',
+      'Docker, Kubernetes, Terraform',
+      'CI/CD: GitHub Actions, Jenkins',
+      'Observability: Grafana',
+      'Auth0, Vanta, SOC 2 Type II readiness',
     ],
   },
 ] as const;

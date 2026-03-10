@@ -8,29 +8,47 @@ const ExperienceHighlights = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <article className="glass-card p-6 rounded-2xl border border-[var(--border)]">
             <header className="mb-4">
-              <h3 className="text-lg font-semibold">Senior Software Engineer @ FoxyAI</h3>
-              <p className="text-[var(--muted)] text-sm">Dec 2023 – Aug 2025</p>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-lg font-semibold">Senior Software Engineer @ ProductNow</h3>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium">
+                  Current
+                </span>
+              </div>
+              <p className="text-[var(--muted)] text-sm">Oct 2025 – Present</p>
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>
-                Built React/TypeScript dashboards for Visual Property Intelligence (scores,
-                detections, valuations).
+                Building an AI-native OS for product & engineering teams with a shared intelligence
+                layer that stays current in real time.
               </li>
-              <li>Launched GPT-powered multimodal search across large property datasets.</li>
-              <li>Optimized Canvas/WebGL pipelines to reduce UI latency and improve fidelity.</li>
+              <li>
+                Developing agentic &ldquo;AI teammates&rdquo; to reduce coordination overhead across
+                planning, handoffs, and delivery.
+              </li>
+              <li>
+                Shipping features in a TypeScript monorepo (Next.js/NestJS); driving enterprise
+                readiness with Auth0, Vanta, and SOC 2 Type II.
+              </li>
             </ul>
           </article>
           <article className="glass-card p-6 rounded-2xl border border-[var(--border)]">
             <header className="mb-4">
-              <h3 className="text-lg font-semibold">Senior Full-Stack Engineer @ Figma</h3>
-              <p className="text-[var(--muted)] text-sm">May 2019 – Dec 2023</p>
+              <h3 className="text-lg font-semibold">Senior Software Engineer @ FoxyAI</h3>
+              <p className="text-[var(--muted)] text-sm">Dec 2023 – Sep 2025</p>
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>
-                Engineered real-time multiplayer editing (WebSockets, OT/CRDT-inspired, WASM perf).
+                Built Next.js/TypeScript dashboards for AI-powered property intelligence (scores,
+                damage detection, valuations).
               </li>
-              <li>Cut render latency 30%+ via Canvas pipeline and resource usage optimizations.</li>
-              <li>Scaled perf testing to GPU-accelerated CI with robust profiling guardrails.</li>
+              <li>
+                Integrated multimodal LLM-powered search via RAG across large-scale property
+                datasets.
+              </li>
+              <li>
+                Implemented Stripe billing system (Checkout + customer portal) and led Page Router →
+                App Router migration.
+              </li>
             </ul>
           </article>
         </div>

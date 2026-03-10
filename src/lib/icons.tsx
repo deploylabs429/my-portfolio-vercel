@@ -57,7 +57,13 @@ export const renderIcon = (name: IconName, className = 'w-8 h-8'): ReactNode => 
   return map[name];
 };
 
-export type BrandName = 'google' | 'figma' | 'electrifai' | 'foxyai' | 'university-of-tokyo';
+export type BrandName =
+  | 'google'
+  | 'figma'
+  | 'electrifai'
+  | 'foxyai'
+  | 'productnow'
+  | 'university-of-tokyo';
 
 export const renderBrandIcon = (brand: BrandName, className = 'w-8 h-8'): ReactNode => {
   switch (brand) {
@@ -65,8 +71,9 @@ export const renderBrandIcon = (brand: BrandName, className = 'w-8 h-8'): ReactN
       return <SiGoogle className={className} />;
     case 'figma':
       return <SiFigma className={className} />;
-    // For brands without a Simple Icons entry or without local assets, fall back
-    // to a sensible default: work icon for companies, school for universities.
+    // For brands without a Simple Icons entry, fall back to sensible defaults.
+    case 'productnow':
+      return <MdFlashOn className={className} />;
     case 'electrifai':
     case 'foxyai':
       return <MdWork className={className} />;
