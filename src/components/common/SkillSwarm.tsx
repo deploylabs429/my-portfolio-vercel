@@ -245,11 +245,6 @@ const SkillSwarm: React.FC<SkillSwarmProps> = ({
     };
   }, [skills, width, height, speed, radii]);
 
-  // Ensure ref array length without losing existing refs
-  if (itemRefs.current.length !== skills.length) {
-    itemRefs.current.length = skills.length;
-  }
-
   return (
     <div
       ref={containerRef}

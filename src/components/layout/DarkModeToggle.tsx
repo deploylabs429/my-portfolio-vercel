@@ -4,26 +4,17 @@ import { useEffect, useState } from 'react';
 
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
+const getInitialTheme = () => {
+  if (typeof window === 'undefined') return false;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme === 'light';
+  return window.matchMedia('(prefers-color-scheme: light)').matches;
+};
+
 const DarkModeToggle = () => {
-  const [isLight, setIsLight] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [isLight, setIsLight] = useState(getInitialTheme);
 
   useEffect(() => {
-    setMounted(true);
-
-    // Check localStorage first, then system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setIsLight(savedTheme === 'light');
-    } else {
-      const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-      setIsLight(prefersLight);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
     if (isLight) {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
@@ -33,24 +24,11 @@ const DarkModeToggle = () => {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
-  }, [isLight, mounted]);
+  }, [isLight]);
 
   const toggleTheme = () => {
     setIsLight(!isLight);
   };
-
-  // Prevent hydration mismatch by showing a consistent initial state
-  if (!mounted) {
-    return (
-      <button
-        aria-label="Toggle theme"
-        className="relative w-12 h-6 rounded-full p-1 transition-all duration-300 focus-ring gradient-bg"
-        disabled
-      >
-        <div className="w-4 h-4 bg-[var(--foreground)] rounded-full shadow-lg transform translate-x-0"></div>
-      </button>
-    );
-  }
 
   return (
     <button

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 import { createPortal } from 'react-dom';
 
@@ -8,22 +8,6 @@ import SkillSwarm from '@/components/common/SkillSwarm';
 import type { SkillKey } from '@/components/common/TechnologyLogos';
 
 const BackgroundSkillField = () => {
-  const [container, setContainer] = useState<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const el = document.createElement('div');
-    el.style.position = 'fixed';
-    el.style.inset = '0';
-    el.style.zIndex = '-10';
-    el.style.pointerEvents = 'none';
-    el.style.opacity = '0.7';
-    document.body.appendChild(el);
-    setContainer(el);
-    return () => {
-      document.body.removeChild(el);
-    };
-  }, []);
-
   const allSkills: SkillKey[] = useMemo(
     () => [
       'react',
@@ -77,18 +61,28 @@ const BackgroundSkillField = () => {
     [],
   );
 
-  if (!container) return null;
+  if (typeof document === 'undefined') return null;
 
   return createPortal(
-    <SkillSwarm
-      skills={allSkills}
-      height={'100vh'}
-      iconSize={34}
-      speed={[0.25, 0.6]}
-      className="w-screen h-screen"
-      titlePrefix="Bg"
-    />,
-    container,
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: -10,
+        pointerEvents: 'none',
+        opacity: 0.7,
+      }}
+    >
+      <SkillSwarm
+        skills={allSkills}
+        height={'100vh'}
+        iconSize={34}
+        speed={[0.25, 0.6]}
+        className="w-screen h-screen"
+        titlePrefix="Bg"
+      />
+    </div>,
+    document.body,
   );
 };
 
