@@ -37,8 +37,8 @@ export const contactMethods = [
   {
     iconName: 'website',
     title: 'Website',
-    value: 'Revy-Tugab-Tech.vercel.app',
-    action: 'https://Revy-Tugab-Tech.vercel.app/',
+    value: 'My Portfolio',
+    action: 'https://revy-tugab-tech.vercel.app/',
     gradient: 'from-orange-500 to-red-500',
     description: 'More about my work',
   },
