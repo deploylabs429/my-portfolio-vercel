@@ -10,7 +10,7 @@ import { proficiencyLevels, skillCategories as skillCategoriesData } from '@/lib
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Skills | Christopher Tanaka',
+  title: 'Skills | Revy Tugab',
   description:
     'Technical arsenal across frontend, backend, AI/ML, and DevOps. Explore categorized skills and proficiency levels.',
   alternates: {

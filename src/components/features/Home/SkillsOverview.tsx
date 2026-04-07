@@ -10,6 +10,7 @@ const SkillsOverview = () => {
             <h3 className="font-semibold mb-3">Frontend & Rendering</h3>
             <div className="flex flex-wrap gap-2 text-xs text-[var(--muted)]">
               <span className="glass px-2 py-1 rounded-md">React</span>
+              <span className="glass px-2 py-1 rounded-md">Vue</span>
               <span className="glass px-2 py-1 rounded-md">TypeScript</span>
               <span className="glass px-2 py-1 rounded-md">Next.js</span>
               <span className="glass px-2 py-1 rounded-md">Canvas</span>
@@ -23,6 +24,8 @@ const SkillsOverview = () => {
               <span className="glass px-2 py-1 rounded-md">Node.js</span>
               <span className="glass px-2 py-1 rounded-md">NestJS</span>
               <span className="glass px-2 py-1 rounded-md">Python</span>
+              <span className="glass px-2 py-1 rounded-md">Ruby on Rails</span>
+              <span className="glass px-2 py-1 rounded-md">Go</span>
               <span className="glass px-2 py-1 rounded-md">GraphQL/REST</span>
               <span className="glass px-2 py-1 rounded-md">WebSockets</span>
               <span className="glass px-2 py-1 rounded-md">Kafka</span>

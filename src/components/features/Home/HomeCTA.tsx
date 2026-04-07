@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { MdCalendarToday } from 'react-icons/md';
 
+import { schedulingUrl } from '@/lib/data/contact';
+
 const HomeCTA = () => {
   return (
     <section className="py-12 md:py-16" aria-labelledby="cta-title">
@@ -14,7 +16,7 @@ const HomeCTA = () => {
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="https://calendly.com/christophertanaka42/30min"
+            href={schedulingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2 px-8 py-4 rounded-2xl on-gradient font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus-ring gradient-bg"

@@ -8,7 +8,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function TwitterImage() {
-  const title = 'Christopher Tanaka';
+  const title = 'Revy Tugab';
   const subtitle = 'Senior Software Engineer • AI • Realtime UI';
 
   return new ImageResponse(

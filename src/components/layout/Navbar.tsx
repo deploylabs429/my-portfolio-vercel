@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { MdAutoAwesome, MdCalendarToday, MdClose, MdMenu } from 'react-icons/md';
 
 import DarkModeToggle from '@/components/layout/DarkModeToggle';
+import { schedulingUrl } from '@/lib/data/contact';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: '🏠' },
@@ -53,7 +54,7 @@ const Navbar = () => {
                   <div className="absolute -inset-1 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300 gradient-bg"></div>
                 </div>
                 <div className="hidden sm:block">
-                  <span className="text-xl font-bold gradient-text">Christopher Tanaka</span>
+                  <span className="text-xl font-bold gradient-text">Revy Tugab</span>
                   <div className="text-xs text-[var(--muted)] font-medium">
                     Senior Software Engineer
                   </div>
@@ -86,7 +87,7 @@ const Navbar = () => {
               {/* Right side */}
               <div className="flex items-center space-x-3">
                 <a
-                  href="https://calendly.com/christophertanaka42/30min"
+                  href={schedulingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl gradient-bg on-gradient font-medium text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 focus-ring whitespace-nowrap"
@@ -135,7 +136,7 @@ const Navbar = () => {
 
                   <div className="pt-2 border-t border-[var(--glass-border)]">
                     <a
-                      href="https://calendly.com/christophertanaka42/30min"
+                      href={schedulingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsMobileMenuOpen(false)}

@@ -9,12 +9,12 @@ const ExperienceHighlights = () => {
           <article className="glass-card p-6 rounded-2xl border border-[var(--border)]">
             <header className="mb-4">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="text-lg font-semibold">Senior Software Engineer @ ProductNow</h3>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium">
+                <h3 className="text-lg font-semibold">Senior Software Engineer @ NextPay</h3>
+                {/*<span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium">
                   Current
-                </span>
+                </span>*/}
               </div>
-              <p className="text-[var(--muted)] text-sm">Oct 2025 – Present</p>
+              <p className="text-[var(--muted)] text-sm">Sep 2023 – Mar 2026</p>
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>
@@ -33,8 +33,10 @@ const ExperienceHighlights = () => {
           </article>
           <article className="glass-card p-6 rounded-2xl border border-[var(--border)]">
             <header className="mb-4">
-              <h3 className="text-lg font-semibold">Senior Software Engineer @ FoxyAI</h3>
-              <p className="text-[var(--muted)] text-sm">Dec 2023 – Sep 2025</p>
+              <h3 className="text-lg font-semibold">
+                Senior Full Stack Engineer @ Employment Hero
+              </h3>
+              <p className="text-[var(--muted)] text-sm">Jan 2021 – Aug 2023</p>
             </header>
             <ul className="text-[var(--muted)] text-sm space-y-2 list-disc list-inside">
               <li>

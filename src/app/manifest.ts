@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
-  const name = 'Christopher Tanaka | Senior Software Engineer';
+  const name = 'Revy Tugab | Senior Software Engineer';
   const short_name = 'CT Portfolio';
   const theme_color = '#0b0b12';
   const background_color = '#0b0b12';

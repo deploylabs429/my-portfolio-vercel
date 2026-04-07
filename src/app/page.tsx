@@ -9,13 +9,13 @@ import HomeHero from '@/components/features/Home/HomeHero';
 import HowIWork from '@/components/features/Home/HowIWork';
 import QuickStats from '@/components/features/Home/QuickStats';
 import SkillsOverview from '@/components/features/Home/SkillsOverview';
-import { homeHighlights, homeStats } from '@/lib/data/home';
+import { sameAsProfiles } from '@/lib/data/contact';
+import { homeHighlights, homePageDescription, homeStats } from '@/lib/data/home';
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Home | Christopher Tanaka',
-  description:
-    'Senior Software Engineer building low-latency, AI-powered products. Explore highlights, experience, and core skills.',
+  title: 'Home | Revy Tugab',
+  description: homePageDescription,
   alternates: {
     canonical: '/',
   },
@@ -34,7 +34,7 @@ const Home = () => {
   const highlights = homeHighlights.map((h) => ({
     ...h,
     // Use theme token for icon color
-    icon: renderIcon(h.iconName, 'w-8 h-8 text-[var(--foreground)]'),
+    icon: renderIcon(h.iconName, 'w-9 h-9 text-[var(--foreground)]'),
   }));
   const stats = homeStats;
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
@@ -46,7 +46,7 @@ const Home = () => {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           url: baseUrl,
-          name: 'Christopher Tanaka | Senior Software Engineer',
+          name: 'Revy Tugab | Senior Software Engineer',
           inLanguage: 'en-US',
         }}
       />
@@ -54,14 +54,10 @@ const Home = () => {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Christopher Tanaka',
+          name: 'Revy Tugab',
           url: baseUrl,
           jobTitle: 'Senior Software Engineer',
-          sameAs: [
-            'https://www.christtanaka.life/',
-            // 'https://www.linkedin.com/in/USERNAME',
-            // 'https://github.com/USERNAME',
-          ],
+          sameAs: [...sameAsProfiles],
         }}
       />
       {/* Hero Section */}

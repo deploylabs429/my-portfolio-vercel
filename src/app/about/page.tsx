@@ -7,12 +7,13 @@ import EducationList from '@/components/features/About/EducationList';
 import ExperienceList from '@/components/features/About/ExperienceList';
 import SkillsGrid from '@/components/features/About/SkillsGrid';
 import { aboutSkillCategories, educationData, experienceData } from '@/lib/data/about';
+import { contactMethods, sameAsProfiles } from '@/lib/data/contact';
 import { renderBrandIcon, renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'About | Christopher Tanaka',
+  title: 'About | Revy Tugab',
   description:
-    'Professional experience, education, and technical strengths of Christopher Tanaka, Senior Software Engineer.',
+    'Professional experience, education, and technical strengths of Revy Tugab, Senior Software Engineer.',
   alternates: {
     canonical: '/about',
   },
@@ -41,9 +42,8 @@ const About = () => {
     icon: renderIcon(c.iconName, 'w-8 h-8'),
   }));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const email = 'christophertanaka42@gmail.com';
-  const phone = '425-565-3249';
-  const website = 'https://himalayas.app/@christophertanaka';
+  const email = contactMethods.find((m) => m.title === 'Email')?.value ?? '';
+  const phone = contactMethods.find((m) => m.title === 'Phone')?.action.replace(/^tel:/u, '') ?? '';
 
   return (
     <PageWrapper>
@@ -51,12 +51,12 @@ const About = () => {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Christopher Tanaka',
+          name: 'Revy Tugab',
           jobTitle: 'Senior Software Engineer',
           url: `${baseUrl}/about`,
           email: `mailto:${email}`,
           telephone: phone,
-          sameAs: [website],
+          sameAs: [...sameAsProfiles],
           alumniOf: educationData.map((e) => ({
             '@type': 'CollegeOrUniversity',
             name: e.institution,

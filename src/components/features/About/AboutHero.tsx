@@ -1,5 +1,7 @@
 import { MdCalendarToday, MdRocketLaunch } from 'react-icons/md';
 
+import { schedulingUrl } from '@/lib/data/contact';
+
 const AboutHero = () => {
   return (
     <section className="relative py-20 text-center">
@@ -20,13 +22,14 @@ const AboutHero = () => {
         </div>
 
         <p className="text-xl text-[var(--muted)] leading-relaxed max-w-2xl mx-auto">
-          A seasoned software engineer with 12+ years of experience building innovative solutions at
-          the intersection of AI, real-time systems, and collaborative tools.
+          A seasoned software engineer with 8+ years of experience building full-stack products with
+          strong experience in distributed systems, cloud infrastructure, and event-driven
+          architecture.
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://calendly.com/christophertanaka42/30min"
+            href={schedulingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl gradient-bg on-gradient font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 focus-ring"

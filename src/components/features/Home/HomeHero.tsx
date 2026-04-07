@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { MdAutoAwesome, MdKeyboardArrowDown } from 'react-icons/md';
 
 import ProfileAvatar from '@/components/features/Home/ProfileAvatar';
+import { homeHeroCopy } from '@/lib/data/home';
 
 const HomeHero = () => {
   return (
@@ -48,13 +49,14 @@ const HomeHero = () => {
         {/* Headline & Summary */}
         <div className="mt-10 md:mt-12 max-w-4xl mx-auto">
           <h1 id="home-hero-title" className="text-3xl md:text-5xl font-bold tracking-tight">
-            Building low-latency, AI-powered products
+            {homeHeroCopy.headline}
           </h1>
           <p className="mt-4 md:mt-6 text-base md:text-xl text-[var(--muted)] leading-relaxed animate-fade-in-scale">
-            Senior Software Engineer with{' '}
-            <span className="gradient-text font-semibold">12+ years </span>
-            delivering real-time collaboration, high-performance UI, and production ML integrations
-            for customer-facing products.
+            {homeHeroCopy.summaryBefore}
+            <span className="gradient-text font-semibold">
+              {homeHeroCopy.summaryHighlight}
+            </span>{' '}
+            {homeHeroCopy.summaryAfter}
           </p>
           <div className="mt-4 flex justify-center">
             <span

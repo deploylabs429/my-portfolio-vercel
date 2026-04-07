@@ -10,9 +10,9 @@ import { contactMethods as contactMethodsData } from '@/lib/data/contact';
 import { renderIcon } from '@/lib/icons';
 
 export const metadata: Metadata = {
-  title: 'Contact | Christopher Tanaka',
+  title: 'Contact | Revy Tugab',
   description:
-    'Get in touch with Christopher Tanaka for projects, opportunities, or a quick coffee chat. Email, phone, and more.',
+    'Get in touch with Revy Tugab for projects, opportunities, or a quick coffee chat. Email, phone, and more.',
   alternates: {
     canonical: '/contact',
   },
@@ -42,7 +42,7 @@ const Contact = () => {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Christopher Tanaka',
+          name: 'Revy Tugab',
           url: `${baseUrl}/contact`,
           contactPoint: [
             ...(email

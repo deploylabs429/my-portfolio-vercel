@@ -9,7 +9,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function OpengraphImage() {
-  const title = 'Christopher Tanaka | Senior Software Engineer';
+  const title = 'Revy Tugab | Senior Software Engineer';
   const subtitle = 'Low-latency, AI-powered products • Real-time collaboration';
 
   return new ImageResponse(

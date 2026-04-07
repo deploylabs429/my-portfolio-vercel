@@ -6,15 +6,16 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx,.js,.mjs --format stylish",
-    "lint:eslint": "eslint . --ext .ts,.tsx,.js,.mjs --format stylish",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.mjs --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.mjs --format stylish --no-warn-ignored",
+    "lint:eslint": "eslint . --ext .ts,.tsx,.js,.mjs --format stylish --no-warn-ignored",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.mjs --fix --no-warn-ignored",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
+    "geist": "^1.7.0",
     "next": "^16.0.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -41,7 +42,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs}": [
-      "eslint --fix",
+      "eslint --fix --no-warn-ignored",
       "prettier --write"
     ],
     "*.{json,md,css}": [

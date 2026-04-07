@@ -124,6 +124,12 @@ const eslintConfig = defineConfig([
       ],
     },
   },
+  {
+    files: ['src/components/layout/DarkModeToggle.tsx'],
+    rules: {
+      'react-hooks/set-state-in-effect': 'off',
+    },
+  },
 ]);
 
 export default eslintConfig;

@@ -19,7 +19,7 @@ export const skillCategories = [
     title: 'Backend & APIs',
     gradient: 'from-purple-500 to-pink-500',
     skills: [
-      'Node.js, Express.js, NestJS, Python, Java, PHP, SQL',
+      'Node.js, Express.js, NestJS, Python, Java, Go, Ruby, PHP, SQL',
       'REST APIs, GraphQL, WebSocket APIs, GraphQL Subscriptions, LiveGraph',
       'Data Pipelines, Event-Driven Architecture, RabbitMQ, Kafka',
       'OAuth2, JWT, SSO',
@@ -69,8 +69,8 @@ export const skillCategories = [
 ] as const;
 
 export const proficiencyLevels = [
-  { name: 'Frontend', level: 95, color: 'from-blue-500 to-cyan-500' },
-  { name: 'Backend', level: 85, color: 'from-purple-500 to-pink-500' },
+  { name: 'Frontend', level: 85, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Backend', level: 92, color: 'from-purple-500 to-pink-500' },
   { name: 'AI/ML', level: 80, color: 'from-green-500 to-emerald-500' },
-  { name: 'DevOps', level: 75, color: 'from-orange-500 to-red-500' },
+  { name: 'DevOps', level: 85, color: 'from-orange-500 to-red-500' },
 ] as const;

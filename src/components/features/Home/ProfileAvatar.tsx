@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 
+import { profileAvatar } from '@/lib/data/home';
+
 const ProfileAvatar = () => {
   return (
     <div className="relative flex flex-col items-center mt-16">
@@ -10,8 +12,8 @@ const ProfileAvatar = () => {
         <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1 animate-fade-in-scale shadow-2xl">
           <div className="w-full h-full rounded-full overflow-hidden">
             <Image
-              src="/photo.png"
-              alt="Christopher Tanaka"
+              src={profileAvatar.src}
+              alt={profileAvatar.alt}
               width={160}
               height={160}
               className="w-full h-full object-cover"
@@ -26,9 +28,9 @@ const ProfileAvatar = () => {
         style={{ animationDelay: '0.3s' }}
       >
         <h1 className="text-5xl sm:text-6xl font-bold">
-          <span className="gradient-text">Christopher</span>
+          <span className="gradient-text">Revy</span>
           <br />
-          <span className="text-[var(--foreground)]">Tanaka</span>
+          <span className="text-[var(--foreground)]">Tugab</span>
         </h1>
 
         <div className="relative">
