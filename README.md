@@ -1,4 +1,4 @@
-# Christopher Tanaka - Portfolio Website
+# Revy Tugab - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS.
 
